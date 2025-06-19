@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AccioJob Review</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <img src="accio.png" alt=""  width="300" height="100">
+    <h1>Review Form</h1> 
+
+    <table border="1" id="Review">
+      <thead>
+        <tr>
+          <th>name</th>
+          <th>number</th>
+          <th>teacher</th>
+          <th>course</th>
+          <th>skills</th>
+          <th>Elgible</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>venkat</td>
+          <td>7569069274</td>
+          <th>5</th>
+          <th>mern</th>
+          <th>all</th>
+        </tr>
+        <tr>
+          <td>venkat</td>
+          <td>7569069274</td>
+          <th>5</th>
+          <th>mern</th>
+          <th>all</th>
+        </tr>
+        <tr>
+          <td>venkat</td>
+          <td>7569069274</td>
+          <th>5</th>
+          <th>mern</th>
+          <th>all</th>
+        </tr>
+        <tr>
+          <td>venkat</td>
+          <td>7569069274</td>
+          <th>5</th>
+          <th>mern</th>
+          <th>all</th>
+        </tr>
+        <tr>
+          <td>venkat</td>
+          <td>7569069274</td>
+          <th>5</th>
+          <th>mern</th>
+          <th>all</th>
+        </tr>
+      </tbody>
+    </table>
+
+    <br><br><br>
+
+    <form onsubmit="handleSubmit(event)" id="form">
+       <label for="name"> First name</label>
+       <input id="name" placeholder="First-name" type="text" >
+       <br>
+       <label for="number"> Phone Number</label>
+       <input id="number" placeholder="Phone Number" type="text" >
+       <br>
+       <br>
+       <label for="teaching">teaching</label>
+       <select name="Teaching" id="teaching" title="Teaching rating" >
+       <option value="one">1</option>
+       <option value="two">2</option>
+       <option value="three">3</option>
+       <option value="five">5</option>
+     </select>
+     <br>
+     <br>
+      
+     <label for="course">course</label>
+       <select name="Course" id="course" title="Course rating" >
+       <option value="one">1</option>
+       <option value="two">2</option>
+       <option value="three">3</option>
+       <option value="five">5</option>
+     </select>
+     <br>
+     <h1></h1>
+     <label for="facilities">facilites</label>
+       <select name="Facilities" id="facilities" title="Facilities rating" >
+       <option value="one">1</option>
+       <option value="two">2</option>
+       <option value="three">3</option>
+       <option value="five">5</option>
+     </select>
+     <br>
+     <br>
+     <br>
+     <label for="" >Selected course</label><br>
+     <input type="radio" name="name" id="mern" value="mern" > <lable for="mern">Mern</lable><br>
+     <input type="radio" name="name" id="java" value="java" ><lable for="java" >java</lable><br>
+     <input type="radio" name="name" id="python" value="python" title="Select Python course" placeholder="Python">
+     <label for="python">python</label>
+     <br>
+     <br><br><br>
+     <label for="">Skills</label><br>
+      <input type="checkbox" name="skills" id="communication" value="communication"><lable for="communication">communication</lable><br>
+     <input type="checkbox" name="skills" id="aptitiude" value="aptitude"><lable for="aptitude">aptitude</lable><br>
+     <input type="checkbox" name="skills" id="reasoning" value="reasoning"><lable for="reasoning">reasoining</lable>
+     <br>
+     <br>
+<br>
+<label for="Comments">Comments</label><br>
+<textarea id="Comments"> </textarea><br>
+<br><br>
+<button>Submit</button><br>
+<br>
+<br>
+
+
+<button onclick="decrease()">-</button><span id="countDisplay"> 0 </span><button onclick="increase()">+</button>
+       
+      </form>
+    <footer>
+  <p>contact: 7569069274<br>
+
+  <a href="vkakarla26@gmail.com">vkakarla26@gmail.com</a></p>
+</footer>
+
+<script>
+
+    let count=0
+    const countDisplay=document.getElementById("countDisplay")
+
+function decrease(){
+    console.log(count)
+    if(count===0){
+      count=0
+    } 
+    else{
+        count=count-1
+    }
+    countDisplay.innerText=count
+     
+}
+function increase(){
+      count=count+1
+console.log(count) 
+
+    countDisplay.innerText=count
+}
+
+   
+  function handleSubmit(event){
+    event.preventDefault()
+    const name=document.getElementById("name").value
+    const number=document.getElementById("number").value
+    const teaching=document.getElementById("teaching").value
+    const course=document.querySelector("input[name='name']:checked").value
+    const skills=document.querySelectorAll("input[name='skills']:checked")
+    const selectedSkills=[]
+    for(let i=0;i<skills.length;i++){
+      selectedSkills.push(skills[i].value)
+    }
+    const formData={
+      name,
+      number,
+      teaching,
+      course,
+    selectedSkills
+      
+   }
+   console.log(formData)
+
+
+  const form=document.getElementById("form")
+  const table=document.getElementById("Review")
+  const row=table.insertRow()
+  function isElgible(){
+    return selectedSkills.some(item=>item==="aptitude")
+  }
+
+//   Row.innerHTML=`<td>${name}</td><td>${number}</td><td>${teaching}</td><td>${course}</td><td>${skills}</td>`
+
+
+  const firstCell=row.insertCell(0)
+  firstCell.innerText=name
+  const secondCell=row.insertCell(1)
+  secondCell.innerText=number
+  const thirdCell=row.insertCell(2)
+  thirdCell.innerText=teaching
+  const fourthCell=row.insertCell(3)
+  fourthCell.innerText=course
+  const fifthCell=row.insertCell(4)
+  fifthCell.innerText=selectedSkills
+  const sixthCell=row.insertCell(5)
+  sixthCell.innerText=isElgible()
+    
+  form.reset()
+  console.log(formData)
+  }
+</script>
+    
+</body>
+</html>
