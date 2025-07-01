@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>animation</title>
+        <style>
+            :root{
+                --textSize: 3.2rem;
+                --bgcolor: rgb(131, 208, 160);
+                --highlight:rgb(43, 58, 171);
+            }
+          body{
+            height: 100vh;
+            background-color: blue;
+            background-image: repeating-linear-gradient( 45deg, aquamarine 2%, rgb(129, 195, 196) 3%, rgb(187, 204, 187) 4%);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: var(--textSize);
+            
+          }
+          .box{
+            background-color: white;
+            padding: 5rem 7rem;
+            /* height: 30vh;
+            width: 30vh; */
+            border: 1px solid grey;
+            box-shadow: 10px 10px 5px grey;
+            display: flex;
+            align-items: center;
+            border-radius: 25px;
+            align-items: center;
+            justify-content: center;
+            gap: 1.5rem;
+           }
+
+           .box ul{
+            margin: 0;
+            padding: 0;
+            font-size: var(--textSize);
+            height:calc(var(--textSize) *1.2);
+            overflow: hidden;
+            color:var(--highlight);
+            min-width: 15rem;
+           }
+           .box ul li{
+            color: var(--highlight);
+            
+           }
+  
+
+        </style>
+    </head>
+    <body>
+        <div class="box">
+            css is 
+            <ul>
+                <li>awesome</li>
+                <li>fun</li>
+                <li>low</li>
+                <li>challenging</li>
+                <li>refreshing</li>
+                <li>awesome</li>
+                <li>awesome</li>
+
+
+            </ul>
+        </div>
+    </body>
+</html>
