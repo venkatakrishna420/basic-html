@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .block1 {
+            height: 100px;
+            width: 100px;
+            margin: 10px;
+            border: 5px solid black;
+            border-radius: 25px;
+        }
+
+        .block2 {
+            height: 100px;
+            width: 100px;
+            margin: 10px;
+            border: 5px solid black;
+            border-radius: 25px;
+        }
+
+        .block3 {
+            height: 100px;
+            width: 100px;
+            margin: 10px;
+            border: 5px solid black;
+            border-radius: 25px;
+        }
+
+        .block4 {
+            height: 100px;
+            width: 100px;
+            margin: 10px;
+            border: 5px solid black;
+            border-radius: 25px;
+
+        }
+        .box{
+            height: 100px;
+            width: 100px;
+            margin: 10px;
+            border: 5px solid black;
+            border-radius: 25px;
+        }
+        .continer{
+              background-color: aquamarine;
+              display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: stretch;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="container" class="continer">
+        <!-- <div class="block1" id="box1" onClick="changeColor(this, 'red')"></div>
+    <div class="block2" id="box2" onClick="changeColor(this, 'yellow')"></div>
+    <div class="block3" id="box3" onClick="changeColor(this, 'blue')"></div>
+    <div class="block4" id="box4" onClick="changeColor(this, 'grey')"></div> -->
+    </div>
+    <!-- <ul id="list">
+    </ul>
+    <script>
+        const Data=["first","second","third","fourth"]
+        const parentData=document.getElementById('list')
+        Data.forEach((item)=>{
+            const list=document.createElement('li')
+            list.innerText=item
+            parentData.appentChild(list)
+        })
+
+    </script> -->
+</body>
+<script>
+    
+    const reqBoxes = [
+        { id: 'box1', color: 'green' },
+        { id: 'box2', color: 'red' },
+        { id: 'box3', color: 'yellow' },
+        { id: 'box4', color: 'blue' },
+        { id: 'box5', color: 'brown' },
+    ]
+
+    const containerDiv = document.getElementById("container")
+    reqBoxes.forEach((item) => {
+        const box = document.createElement("div")
+        box.className = 'box'
+        box.id = item.id
+        box.onclick = () => changeColor(item.id, item.color)
+        containerDiv.appendChild(box)
+    })
+    let filledBoxes = new Set()
+    
+    function changeColor(id, color) {
+        const box = document.getElementById(id);
+        box.style.backgroundColor = color;
+        filledBoxes.add(id)
+
+        if (filledBoxes.size === reqBoxes.length) {
+            removeColor(id);
+        }
+        function removeColor(id) {
+            const fcolor = [...filledBoxes];
+            console.log(fcolor)
+            for (let i = 1; i <= reqBoxes.length; i++) {
+                setTimeout(() => {
+                    const box = document.getElementById(fcolor.pop())
+                    box.style.background = ""
+                }, 2000 * i)
+            }
+        }
+    }
+
+</script>
+
+</html>
