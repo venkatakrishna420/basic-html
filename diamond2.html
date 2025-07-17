@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Diamond</title>
+    <style>
+        :root{
+            --bg: #233637;
+
+            --green1: #1fb67c;
+
+            --green2: #20bc7d;
+
+            --green3: #26c893;
+
+            --green4: #55ddb9;
+        }
+      body {
+        height: 100vh;
+        background-color: black;
+        background-image: radial-gradient(
+            color-mix(in srgb,var(--bg) 80%,white 20%),
+            color-mix(in srgb,var(--bg) 80%,black 20%)
+        );
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    .diamond{
+        width:100vmin;
+        height: 100vmin;
+        border:1px solid black;
+        background:linear-gradient(-135deg,var(--green3) 10vmin,transparent 10vmin) 30vmin 40vmin / 20vmin 20vmin no-repeat ,
+        linear-gradient(-45deg,var(--green4) 10vmin,transparent 10vmin) 30vmin 20vmin / 20vmin 20vmin no-repeat ,
+        linear-gradient(135deg,var(--green3) 10vmin,transparent 10vmin) 64vmin 54vmin / 20vmin 20vmin no-repeat,
+        linear-gradient(-135deg,var(--green4) 10vmin,transparent 10vmin) 44vmin 54vmin / 20vmin 20vmin no-repeat,
+        linear-gradient(135deg,var(--green2) 10vmin,transparent 10vmin) 78vmin 40vmin / 20vmin 20vmin no-repeat,
+        linear-gradient(45deg,var(--green4) 10vmin,transparent 10vmin) 78vmin 20vmin / 20vmin 20vmin no-repeat,
+        linear-gradient(45deg,var(--green4) 10vmin,transparent 10vmin) 64vmin 20vmin / 20vmin 20vmin no-repeat,
+        linear-gradient(45deg,var(--green1) 10vmin,transparent 10vmin) 50vmin 34vmin / 20vmin 20vmin no-repeat,
+        linear-gradient(-45deg,var(--green2) 10vmin,transparent 10vmin) 44vmin 20vmin / 20vmin 20vmin no-repeat,
+        linear-gradient(-135deg,var(--green3) 10vmin,transparent 10vmin) 44vmin 40vmin / 20vmin 20vmin no-repeat,
+        linear-gradient(-45deg,var(--green4) 10vmin,transparent 10vmin) 58vmin 34vmin / 20vmin 20vmin no-repeat,
+        linear-gradient(135deg,var(--green1) 10vmin,transparent 10vmin) 64vmin 40vmin / 20vmin 20vmin no-repeat,
+        linear-gradient(-135deg,var(--green3) 10vmin,transparent 10vmin) 44vmin 40vmin / 20vmin 20vmin no-repeat,
+        linear-gradient(-135deg,var(--green3) 10vmin,transparent 10vmin) 44vmin 40vmin / 20vmin 20vmin no-repeat
+        
+
+
+    }
+    </style>
+  </head>
+  <body>
+    <div class="diamond"></div>
+  </body>
+</html>

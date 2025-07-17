@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Door</title>
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
+    <!-- <link rel="stylesheet" href="light_door.css"> -->
+  </head>
+  <style>
+    body {
+      padding: 0;
+      margin: 0;
+      height: 100vh;
+      width: 100vw;
+    }
+
+    div.container {
+      display: grid;
+      place-content: center;
+      grid-auto-flow: column;
+    }
+    
+
+    .animation {
+      animation: rotate 2s ease-in-out;
+    }
+
+    @keyframes rotate {
+      from {
+        transform: rotate(0deg);
+      }
+      to {
+        transform: rotate(360deg);
+      }
+    }
+    .animated:hover{
+        animation: bounce;
+    }
+  </style>
+  <body>
+    <div class="container">
+      <svg width="300" height="200" id="star1" class="star" onclick="addStar()">
+        <polygon
+          points="100,10 40,198 190,78 10,78 160,198"
+          style="
+            fill: lime;
+            stroke: purple;
+            stroke-width: 5;
+            fill-rule: evenodd;
+          "
+        />
+      </svg>
+      <svg width="300" height="200" class="star animate_animated animate__bounce">
+        <polygon
+          points="100,10 40,198 190,78 10,78 160,198"
+          style="
+            fill: lime;
+            stroke: purple;
+            stroke-width: 5;
+            fill-rule: evenodd;
+          "
+        />
+      </svg>
+      <svg width="300" height="200" class="star">
+        <polygon
+          points="100,10 40,198 190,78 10,78 160,198"
+          style="
+            fill: lime;
+            stroke: purple;
+            stroke-width: 5;
+            fill-rule: evenodd;
+          "
+        />
+      </svg>
+      <svg width="300" height="200" class="star">
+        <polygon
+          points="100,10 40,198 190,78 10,78 160,198"
+          style="
+            fill: lime;
+            stroke: purple;
+            stroke-width: 5;
+            fill-rule: evenodd;
+          "
+        />
+      </svg>
+      <svg width="300" height="200" class="star">
+        <polygon
+          points="100,10 40,198 190,78 10,78 160,198"
+          style="
+            fill: lime;
+            stroke: purple;
+            stroke-width: 5;
+            fill-rule: evenodd;
+          "
+        />
+      </svg>
+    </div>
+
+    <script>
+      const stars = document.getElementsByClassName("star");
+
+      console.log(stars, "stars from class name");
+
+      
+
+      function addStar() {
+        const star = document.getElementById("star1");
+        for(let i =0;i <stars.length; i++){
+          stars[i].onclick = ()=>{
+            star.classList.add("animation");
+        }
+      
+        
+      }
+    }
+    </script>
+  </body>
+</html>

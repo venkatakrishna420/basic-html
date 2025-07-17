@@ -1,0 +1,38 @@
+.container{
+    min-height: 100vh;
+    min-width: 100%;
+    display: grid;
+    grid-template-areas:
+    "nav"
+    "mainBody"
+    "articles"
+    "findJobs"
+    "jobPosts"
+    "footer";
+    grid-template-rows:50px 2fr 1fr 1fr 1fr 20px;
+    overflow: auto;
+}
+.container > div.nav {
+  grid-area: nav;
+  background-color: aqua;
+}
+.container > div.mainBody {
+  grid-area: mainBody;
+  background-color: blueviolet;
+}
+.container > div.articles {
+  grid-area: articles;
+  background-color: green;
+}
+.container > div.findJobs{
+  grid-area: findJobs;
+  background-color: yellow;
+}
+.container > div.jobPost {
+  grid-area: jobPost;
+  background-color: burlywood;
+}
+.container > div.footer{
+  grid-area: footer;
+  background-color: grey;
+}

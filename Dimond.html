@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Diamond</title>
+    <style>
+        :root{
+
+        }
+      body {
+        height: 100vh;
+        background-color: black;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        animation: bright 5s forwards;
+      }
+      .diamond {
+        width: 150px;
+        height: 150px;
+        border: 1px solid black;
+        background: linear-gradient(to bottom right, #ccc, #09bae1);
+        clip-path: polygon(
+          80% 25%,
+          100% 60%,
+          50% 100%,
+          0% 60%,
+          20% 25% 
+        );
+        box-shadow: 0 0 20px rgba(255, 255, 255, 0.6);
+      }
+      @keyframes bright {
+        0% {
+          background-image: radial-gradient(
+            circle,
+            rgba(255, 255, 255, 0.8) 0%,
+            rgba(255, 255, 255, 0.2) 40%,
+            rgba(0, 0, 0, 0) 70%
+          );
+        }
+         25% {
+          background-image: radial-gradient(
+            circle,
+            rgba(255, 255, 255, 0.8) 0%,
+            rgba(255, 255, 255, 0.2) 50%,
+            rgba(0, 0, 0, 0) 60%
+          );
+        }
+        50% {
+          background-image: radial-gradient(
+            circle,
+            rgba(255, 255, 255, 1) 0%,
+            rgba(255, 255, 255, 0.4) 60%,
+            rgba(0, 0, 0, 0.2) 80%
+          );}
+         75% {
+          background-image: radial-gradient(
+            circle,
+            rgba(255, 255, 255, 0.8) 0%,
+            rgba(255, 255, 255, 0.2) 70%,
+            rgba(0, 0, 0, 0) 90%
+          );
+        }
+        
+        100% {
+          background-image: none;
+          background-color: black;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="diamond"></div>
+  </body>
+</html>

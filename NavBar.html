@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Document</title>
+    <style>
+      .continer {
+        /* display: flex; */
+        background-color: blue;
+      }
+      ul {
+        list-style: none;
+        display: flex;
+        justify-content: space-between;
+        color: white;
+      }
+      @media (max-width: 780px) {
+        .continer {
+          background-color: yellow;
+          display: flex;
+          flex-direction: column;
+        }
+        ul {
+          flex-direction: column;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="continer">
+      <ul>
+        <li>home</li>
+        <li>contact</li>
+        <li>home</li>
+        <li>home</li>
+      </ul>
+    </div>
+  </body>
+</html>
