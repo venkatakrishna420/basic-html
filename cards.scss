@@ -1,0 +1,63 @@
+$bg-page: #262626;
+$bg-card: #4d4d4d;
+$text: #f5f5f5;
+$bg: #767fc3;
+
+@mixin bg-card{
+    background-color: rgb(58, 58, 162);
+    @content;
+}
+@mixin ab{
+    @media(min-width: 420px){
+        @content;
+    }
+}
+@mixin abc{
+    @media(min-width: 720px){
+        @content;
+    }
+}
+@mixin abcd{
+    @media(min-width: 1000px){
+        @content;
+    }
+}
+
+ 
+
+body {
+  background-color: #959cce;
+  background-size: 30rem;
+  color: $text;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; 
+}
+main{
+    @include abcd {
+    max-width: 40vw;
+    align-items: center;
+    margin-right: 10vw;
+    margin-left: 15vw;
+  }
+}
+.card{
+    @include bg-card{
+    border-radius: 10px;
+    text-align: center;
+    }
+}
+h1{
+    color: white;
+    text-transform: uppercase;
+    @include abcd{
+        transform: rotate(270deg);
+        width: 60vh;
+        height: auto;
+        font-size: 5rem;
+        position: fixed;
+        top: 50vh;
+        left: 0px;
+}
+}

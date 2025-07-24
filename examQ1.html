@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <style>
+    body {
+      margin: 0;
+      background-color: green;
+      display: flex;
+      justify-content: center;
+    }
+
+    .container {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr); /* ✅ fixed spelling */
+      gap: 5rem;
+      padding: 20px;
+      max-width: 1200px;
+      width: 100%;
+      box-sizing: border-box;
+    }
+
+    .card {
+      background-color: white;
+      padding: 16px;
+      border-radius: 8px;
+      text-align: center;
+    }
+
+    .image-placeholder { /* ✅ fixed class name */
+      background-color: #ccc;
+      width: 100%;
+      height: 150px;
+      border-radius: 8px;
+    }
+
+    @media (max-width: 600px) {
+      .container {
+        grid-template-columns: repeat(2, 1fr); /* ✅ fixed spelling */
+      }
+    }
+  </style>
+  <title>Product Grid</title>
+</head>
+<body>
+  <main class="container">
+    <section class="card">
+      <div class="image-placeholder"></div>
+      <h2>Product A</h2>
+      <p>Description of product 1</p>
+    </section>
+    <section class="card">
+      <div class="image-placeholder"></div>
+      <h2>Product A</h2>
+      <p>Description of product 1</p>
+    </section>
+    <section class="card">
+      <div class="image-placeholder"></div>
+      <h2>Product A</h2>
+      <p>Description of product 1</p>
+    </section>
+    <section class="card">
+      <div class="image-placeholder"></div>
+      <h2>Product A</h2>
+      <p>Description of product 1</p>
+    </section>
+  </main>
+</body>
+</html>

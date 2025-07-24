@@ -1,0 +1,214 @@
+body {
+  padding: 0;
+  margin: 0;
+  overflow-x: hidden;
+  font-family: Arial, sans-serif;
+}
+
+#sec-1 {
+  height: 100vh;
+  width: 100vw;
+  position: relative;
+}
+#sec-1 video {
+  height: 100vh;
+  width: 100vw;
+  object-fit: cover;
+  position: absolute;
+}
+#sec-1 .buy {
+  height: 70px;
+  width: 160px;
+  background-color: #eb5413;
+  color: white;
+  text-transform: uppercase;
+  cursor: pointer;
+  font-size: 1.2rem;
+  font-weight: 500;
+  border: none;
+  border-radius: 8px;
+  position: absolute;
+  left: 45vw;
+  top: 65vh;
+}
+#sec-1 .buy:hover {
+  background-color: black;
+}
+#sec-1 .content {
+  font-size: 1.5rem;
+  font-weight: 480;
+  position: absolute;
+  left: 30vw;
+  top: 40vh;
+  line-height: 1.5;
+}
+#sec-1 .content b {
+  font-weight: 700;
+}
+#sec-1 nav {
+  width: 100vw;
+  height: 10vh;
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+}
+#sec-1 nav .nav-bar {
+  width: 30vw;
+  display: flex;
+  justify-content: space-evenly;
+  top: 5vh;
+  left: 5vw;
+  color: black;
+  font-size: 20px;
+  align-items: center;
+}
+#sec-1 nav .nav-bar a {
+  color: black;
+}
+#sec-1 nav .logo {
+  left: 70vw;
+  top: 8vh;
+  cursor: pointer;
+}
+#sec-1 nav .logo:hover {
+  top: 5vh;
+}
+#sec-1 .feature-container {
+  position: absolute;
+  display: flex;
+  width: 100vw;
+  justify-content: space-between;
+  top: 75vh;
+  color: rgb(126, 126, 136);
+  flex-wrap: wrap;
+}
+#sec-1 .feature-container .features {
+  flex: 25%;
+  display: flex;
+  gap: 2rem;
+}
+#sec-1 .feature-container .features .feature-details {
+  line-height: 26px;
+  font-weight: 480;
+}
+#sec-1 .feature-container .features .feature-details h4 {
+  font-size: 24px;
+}
+#sec-1 .feature-container .features .feature-details p {
+  font-size: 18px;
+}
+@media (max-width: 700px) {
+  #sec-1 .feature-container .features .features {
+    flex: 50%;
+  }
+}
+@media (max-width: 750px) {
+  #sec-1 .feature-container .features {
+    flex: 50%;
+  }
+}
+
+#sec-2 {
+  height: 100vh;
+  width: 100vw;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  align-items: center;
+  box-sizing: border-box;
+}
+#sec-2 .text {
+  font-size: 3.8rem;
+  font-weight: 450;
+}
+#sec-2 .img-rec {
+  height: 65vh;
+  width: 65vw;
+}
+#sec-2 .cards {
+  display: flex;
+  justify-content: space-evenly;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+#sec-2 .cards .card {
+  padding: 2rem;
+  box-shadow: 10px 10px 5px #888888;
+  border-radius: 25px;
+}
+
+#sec-3 {
+  height: 100vh;
+  width: 100vw;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+}
+#sec-3 .left {
+  flex: 50%;
+  justify-content: center;
+}
+#sec-3 .right {
+  overflow-y: hidden;
+}
+#sec-3 .right video {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+#sec-4 {
+  height: 100vh;
+  width: 100vw;
+  position: relative;
+  overflow-y: hidden;
+}
+
+#sec-5 {
+  height: 100vh;
+  width: 100vw;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  align-items: center;
+  box-sizing: border-box;
+}
+#sec-5 .text2 {
+  font-size: 3.8rem;
+  font-weight: 450;
+}
+#sec-5 .logo-2 {
+  position: absolute;
+  left: 30vh;
+  top: 20vh;
+}
+#sec-5 .card2 {
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+}
+#sec-5 .card2 .text-2 {
+  font-size: 1rem;
+  font-weight: 300;
+}
+#sec-5 .card2 .card-2 {
+  display: flex;
+  position: absolute;
+  height: 20vh;
+  width: 40vw;
+  top: 30vh;
+}
+
+#sec-6 {
+  height: 100vh;
+  width: 100vw;
+  position: relative;
+}
+#sec-6 video {
+  height: 100vh;
+  width: 100vw;
+}
+
+/*# sourceMappingURL=busy_bar.css.map */
