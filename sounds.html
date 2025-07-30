@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Sounds</title>
+    </head>
+
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+            background-color: #A164DF;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .btn{
+            background-color: #663399;
+            color: white;
+            border: none;
+        }
+        .stop{
+            background-color: #663399;
+            color: white;
+            border: none;
+        }
+    </style>
+    <body>
+        
+        <div class="container">
+            <button id="applause" class="btn">applause</button>
+            <button id="boo" class="btn">boo</button>
+            <button id="gasp" class="btn">gasp</button>
+            <button id="tada" class="btn">tada</button>
+            <button id="victory" class="btn">victory</button>
+            <button id="wrong" class="btn">wrong</button>
+            <button id="stop" class="stop">stop</button>
+
+        </div>
+
+        <script>
+
+            const buttons = ["applause","boo","gasp","tada","victory","wrong","stop"]
+            const storedAudios = {}
+
+            for(let i = 0; i<buttons.length;i++){
+                storedAudios[buttons[i]] = new Audio(sounds/${buttons[i]}.mp3)
+
+                const button = document.getElementById(buttons[i])
+                
+                button.addEventListener('click',()=>playSound(buttons[i]))
+            }
+            console.log(storedAudios,'stored audios')
+
+            function playSound (id){
+                stopAllAudio()
+
+                storedAudios[id].play()
+
+            }
+            
+            function stopAllAudio(){
+          
+
+                Object.values(storedAudios).forEach((audio)=>{
+                    audio.pause()
+                    audio.currentTime = 0
+                })
+            }
+
+        </script>
+    </body>
+</html>

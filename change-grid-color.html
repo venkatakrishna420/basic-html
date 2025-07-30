@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>change-color</title>
+    <style>
+          .body{
+          }
+          .grid_container{
+            display: grid;
+            grid-template-columns: repeat(3, 100px);
+            grid-template-rows: repeat(3, 100px);
+            gap: 20px;
+            justify-content: center;
+            margin-top: 20px;
+          }
+          .grid_item{
+            border: 1px solid black;
+            display: grid;
+            font-size: 2rem;
+            justify-content: center;
+            align-items: center;
+          }
+          .actions{
+            display: flex;
+            gap:3rem;
+            justify-content: center;
+            margin-top: 20px;
+          }
+    </style>
+</head>
+<body>
+    <div class="grid_container" id="grid_container">
+        <div class="grid_item" id="1">1</div>
+        <div class="grid_item" id="2">2</div>
+        <div class="grid_item" id="3">3</div>
+        <div class="grid_item" id="4">4</div>
+        <div class="grid_item" id="5">5</div>
+        <div class="grid_item" id="6">6</div>
+        <div class="grid_item" id="7">7</div>
+        <div class="grid_item" id="8">8</div>
+        <div class="grid_item" id="9">9</div>
+    </div>
+    <div class="actions">
+        <input type="number" placeholder="BlockNumber" id="Block_number">
+        <input type="text" placeholder="selectColor" id="select_Color">
+        <button id="change-color">ChangeColor</button>
+        <button id="">ChangeColor</button>
+    </div>
+    
+</body>
+</html>

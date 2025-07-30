@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>forms</title>
+</head>
+<body>
+   <form onsubmit="onSubmit(event)">
+    <label for="email">E-mail</label>
+    <input type="email" id="email">
+    <label for="password">password</label>
+    <input type="text" id="password">
+    <input type="submit" value="sign in" id="login" readonly>
+   </form>
+   <script>
+    function onSubmit(event){
+    event.preventDefault()
+    alert("submit function triggered")
+    }
+   </script>
+    
+</body>
+</html>
+
+
+
+<script>
+    function getFormValue(event){
+        event.preventDefault()
+    }
+</script>

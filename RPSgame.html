@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Rock Paper Scissors Game</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            background: linear-gradient(to right, #1c92d2, #d951a3);
+            color: #333;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin-top: 30px;
+            color: #fff;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+        }
+
+        .game-container {
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            margin-top: 50px;
+            gap: 100px;
+        }
+
+        .player-section {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .player-title {
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            color: #fff;
+        }
+
+        .options button {
+            margin: 10px;
+            padding: 15px 30px;
+            font-size: 1rem;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .options button:hover {
+            transform: scale(1.05);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .result {
+            margin-top: 40px;
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: #fff;
+        }
+
+        .rock {
+            background-color: #d32f2f;
+            color: white;
+        }
+
+        .paper {
+            background-color: #388e3c;
+            color: white;
+        }
+
+        .scissors {
+            background-color: #1976d2;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1 id="scoreboard">Player: 0 | Computer: 0</h1>
+
+    <div class="game-container">
+        <div class="player-section">
+            <div class="player-title">Player 1</div>
+            <div class="options">
+                <button class="rock" onclick="playRound('rock')">Rock 🪨</button>
+                <button class="paper" onclick="playRound('paper')">Paper 📄</button>
+                <button class="scissors" onclick="playRound('scissors')">Scissors ✂️</button>
+            </div>
+        </div>
+
+        <div class="player-section">
+            <div class="player-title">Computer</div>
+            <div id="computer-choice" class="options">
+                <!-- Computer's choice will appear here -->
+            </div>
+        </div>
+    </div>
+
+    <div class="result" id="resultText">Make your move!</div>
+
+    <script>
+       
+      
+
+    </script>
+
+</body>
+
+</html>
